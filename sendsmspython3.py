@@ -6,8 +6,8 @@ import time
 import requests
 
 host = "192.168.0.1"
-port = "80"
-# port = None
+# port = "80"
+port = None
 
 if port:
     origin = f"http://{host}:{port}"
