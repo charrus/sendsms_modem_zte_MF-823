@@ -4,7 +4,6 @@ import sys
 import time
 
 import requests
-
 from bs4 import BeautifulSoup
 
 host = "192.168.8.1"
@@ -41,8 +40,8 @@ referer = f"{origin}/html/smsinbox.html"
 sendsms = requests.get(referer)
 
 soup = BeautifulSoup(sendsms.text, "html.parser")
-for token in soup.findAll('meta', attrs={'name': 'csrf_token'}):
-    token = token['content']
+for token in soup.findAll("meta", attrs={"name": "csrf_token"}):
+    token = token["content"]
     break
 
 headers = {
